@@ -45,3 +45,8 @@ ul {
 ul li{
     list-style-type: decimal;
 }
+
+.box{
+    margin-left: 10px;
+    background-color: red;
+}

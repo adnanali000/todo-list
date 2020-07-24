@@ -1,7 +1,7 @@
 var todoVal = document.getElementById("list");
 
 function addTodo(){
-    
+
     //todoitem
     var todoItem = document.getElementById("todoItem");
     var li = document.createElement("li");
@@ -10,6 +10,12 @@ function addTodo(){
     var liText = document.createTextNode(todoItem.value);
     li.appendChild(liText);
 
+    //checkbox
+    var check = document.createElement("input");
+    check.setAttribute("type","checkbox")
+    check.setAttribute("class","box");
+    li.appendChild(check);
+        
     //deletebutton
 
     var delbut = document.createElement("button");
@@ -31,6 +37,10 @@ function addTodo(){
     editbut.setAttribute("onclick","editVal(this)")
     //editbut.appendChild(editbutVal);
     li.appendChild(editbut);
+
+
+    
+
 
 
 
