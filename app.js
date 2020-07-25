@@ -1,9 +1,13 @@
 var todoVal = document.getElementById("list");
-
+var todoItem = document.getElementById("todoItem");
 function addTodo(){
+     
+     if(!todoItem.checkValidity()){
+         alert(todoItem.validationMessage);
+     }
+     else{
 
     //todoitem
-    var todoItem = document.getElementById("todoItem");
     var li = document.createElement("li");
     var line = document.createElement("hr")
     li.appendChild(line);
@@ -19,12 +23,10 @@ function addTodo(){
     //deletebutton
 
     var delbut = document.createElement("button");
-    //var delbutVal = document.createTextNode("delete");
     delbut.setAttribute("class","btn btn-outline-danger")
     delbut.setAttribute("class","fa fa-trash-o")
     delbut.setAttribute("style","font-size:23px;color:red;margin-left:10px")
     delbut.setAttribute("onclick","delVal(this)")
-    //delbut.appendChild(delbutVal)
     li.appendChild(delbut)
 
     //editbutton
@@ -46,7 +48,7 @@ function addTodo(){
 
     todoVal.appendChild(li);
     todoItem.value = "";
-
+     }
 }
 
 function delVal(e){
